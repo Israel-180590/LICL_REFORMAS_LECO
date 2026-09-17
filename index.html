@@ -19,13 +19,14 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/general.css">
 
 </head>
 
 <body>
-
+    <!-- NAVEGACIÓN -->
     <header>
 
         <ul class="nav me-auto">
@@ -49,14 +50,54 @@
 
     </header>
 
-    <main>
-        <section class="introduccion">
-            <h1>Bienvenido a LECO Reformas y Construcciones</h1>
-            <h2>Si tienes un presupuesto <br> TE LO MEJORAMOS </h2>
-            <p>Empresa de reformas y construcciones en Valencia. Ofrecemos servicios de reforma integral, cocinas,
-                baños,
-                albañilería y pintura con calidad profesional y precios ajustados.</p>
+    <!--MAIN / HERO SECTION-->
+    <main id="inicio">
+        <section class="hero-section text-center text-white d-flex align-items-center">
+            <div class="overlay"></div>
+            <div class="container position-relative z-1">
+                <h1 class="display-3 fw-bold mb-3 text-uppercase">
+                    Bienvenido a <br> <span class=" highlight-text">LECO Reformas y Construcción</span>
+                </h1>
+                <p class="lead fs-3 fw-semibold mb-4 bg-badge d-inline-block px-4 py-2 rounded-pill">
+                    Si tienes un presupuesto... ¡TE LO MEJORAMOS!
+                </p>
+                <p class="fs-5 max-w-700 mx-auto mb-5 text-light">
+                    Empresa de reformas y construcciones en Valencia, Especialistas en reformas integrales, cocinas,
+                    baños, albañilería y pintura con acabados profesionales.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="#presupuesto" class="btn btn-primary-custom btn-lg shadow-lg">
+                        <i class="fa-solid fa-calculator me-2"></i> Solicitar Presupuesto Gratuito
+                    </a>
+
+                    <a href="#servicios" class="btn btn-outline-light btn-lg">
+                        <i class="fa-solid fa-arrow-right ms-2"></i> Ver nuestros servicios
+                    </a>
+                </div>
+            </div>
         </section>
+
+        <!-- SECCIÓN TARJETAS DE SERVICIOS -->
+        <section id="servicios" class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold fs-1 text-dark">Nuestros Servicios</h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+
+
+                <div class="row g-4">
+                    <!-- Card 1-->
+                    <div class="col-md-4">
+                        <div class="card service-card h-100 border-0 shadow-ssm p-4 text-center">
+                            <i class="fa-solid fa-house-chimney fa-2x"></i>
+                        </div>
+                        <h3 class="h4 card-title fw-bold">Reforma Integral</h3>
+                        <p class="card-text text-muted">Tu hogar lo merece</p>
+                    </div>
+                </div>
+        </section>
+
     </main>
 
     <footer class="footer-leco">

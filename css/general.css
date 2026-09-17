@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #0a5976a9;     /* Blanco puro */
+    --primary-color: #022533c4;     /* Blanco puro */
     --secondary-color: #2f3a3f64;   /* Gris carbón suave */
     --accent-secondary: #ffffffa3;      /* Gris acero */
     --border-color: #121235;      /* Gris claro */
@@ -48,29 +48,23 @@ header ul.ms-auto {
     transition: transform 0.25s ease;
 }
 
-.introduccion {
-    position: center;
-    z-index: 1;
-    text-align: center;
-    color: var(--accent-color2);
-    padding: 2rem;
-    margin-top: 4%;
+/* Fuentes y estilos base */
+body {
+    font-family: 'Poppins',sans-serif;
+    color:#333;
 }
 
-h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    color: var(--accent-color2);
-    font-weight: bold;
+/* Hero Section con Imagen de Fondo */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    /* Reemplaza la URL por la ruta de tu archivo de imagen */
+    background-image: url('/images/reformas.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 100px;
 }
-
-p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-top: 5%;
-    color: var(--accent-color2);
-}
-
 
 .footer-leco {
     background-color:var(--primary-color);
@@ -98,9 +92,5 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
 
