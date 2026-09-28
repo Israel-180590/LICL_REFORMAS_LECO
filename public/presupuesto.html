@@ -15,8 +15,6 @@
     <meta property="og:description" content="Página de Reformas y construcciones LECO">
     <meta property="og:image" content="/images/LogoLeco.jpeg">
 
-    <title>Index LECO REFORMAS</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -55,171 +53,176 @@
 
     </header>
 
-    <main class="hero-section flex-grow-1 position-relative">
-        <div class="overlay"></div>
-        <div class="container position-relative py-5" styles="z-index: 1;">
+    <main id="presupuesto">
+        <section class="hero-section flex-grow-1 position-relative pb-5">
+            <div class="overlay"></div>
+            <div class="container position-relative py-5 z-1">
 
-            <!-- Encabezado del Hero -->
-            <header class="text-center text-white mb-5">
-                <h1 class="display-4 fw-bold">Solicita tu Presupuesto Sin Compromiso</h1>
-                <p class="fs-5 max-w-700 mx-auto text-light">Si tienes un presupuesto... <span
-                        class="fw-bold text-warning">¡TE LO MEJORAMOS!</span> Déjanos los detalles de tu proyecto y nos
-                    pondremos en contacto contigo. </p>
-                <div class="divider mx-auto my-3"></div>
-            </header>
-
-            <div class="row g-4">
-
-                <!-- Sección 1: Formulario Principal -->
-                <section class="col-lg-8" aria-labelledby="titulo-formulario">
-                    <form id="presupuesto-form" class="card border-0 shadow-lg p-4 rounded-4 bg-white">
-
-                        <fieldset class="row g-3 mb-4 border-0 p-0">
-                            <legend id="titulo-formulario" class="h3 fw-bold text-dark mb-3 float-none w-auto">
-                                <i class="fa solid fa calculator me-2 highlight-text"></i> Detalles del Proyecto
-                            </legend>
-
-                            <p class="col-md-6 m-0">
-                                <label for="tipo-proyecto" class="form-label fw-semibold">Tipo de Proyecto</label>
-                                <select id="tipo-proyecto" class="form-select form-select-lg fs-6" required>
-                                    <option value="" selected disable> Selecciona una opción...</option>
-                                    <option value="integral">Reforma Integral</option>
-                                    <option value="cocina-bano">Cocinas y Baños</option>
-                                    <option value="pintura">Pintura y Acabados</option>
-                                    <option value="albanileria">Albañileria General</option>
-                                    <option value="otro">Otro tipo de trabajo</option>
-                                </select>
-                            </p>
-
-                            <p class="col-md-6 m-0">
-                                <label for="ubicacion" class="form-label fw-semibold">Ubicación/Población</label>
-                                <input type="text" id="ubicación" class="form-control form-control-lg fs-6"
-                                    placeholder="Ej. Valencia, Torrent, Paterna..." required>
-                            </p>
-
-                            <p class="col-12 m-0 mt-3">
-                                <label for="descripcion" class="form-label fw-semibold">Descripción de las obras o
-                                    reformas</label>
-                                <textarea id="descripcion" class="form-control fs-6" rows="4"
-                                    placeholder="Explícanos brevemente qué deseas hacer,m² aproximados, calidades, etc."
-                                    required></textarea>
-                            </p>
-
-                            <p class="col-12 m-0 mt-3">
-                                <label for="archivos" class="form-label fw-semibold">Subir Planos, Fotos o Presupuesto
-                                    actual (Opcional)</label>
-                                <input class="form-control" type="file" id="archivos" multiple>
-                                <small class="form-text text-muted">Puedes adjuntar fotos del estado actual o un
-                                    presupuesto previo para que lo mejoremos.</small>
-                            </p>
-
-                        </fieldset>
-
-                        <hr class="my-3">
-
-                        <fieldset class="row g-3 border-0 p-0">
-                            <legend class="h4 fw-bold text-dark mb-3 float-none w-auto">
-                                <i class="fa-solid fa-user me-2 highlight-text"></i>Datos de Contacto
-                            </legend>
-
-                            <p class="col-md-6 m-0">
-                                <label for="nombre" class="form-label fw-semibold">Nombre Completo</label>
-                                <input type="text" id="nombre" class="form-control form-control-lg fs-6"
-                                    placeholder="Tu nombre" required>
-                            </p>
-
-                            <p class="col-md-6 m-0">
-                                <label for="telefono" class="form-label fw-semibold">Teléfono de Contacto</label>
-                                <input type="tel" id="telefono" class="form-control form-control-lg fs-6"
-                                    placeholder="Ej. 600 000 000" required>
-                            </p>
-
-                            <p class="col-12 m-0 mt-3">
-                                <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
-                                <input type="email" id="email" class="form-control form-control-lg fs-6"
-                                    placeholder="tu@email.com" required>
-                            </p>
-                        </fieldset>
-
-                        <p class="text-center mt-4 mb-0">
-                            <button type="submit" class="btn btn-primary-custom btn-lg w-100 shadow">
-                                Enviarme Presupuesto Gratuito <i class="fa-solid fa-paper-plane ms-2"></i>
-                            </button>
-                        </p>
-
-                    </form>
-                </section>
-
-                <!-- Sidebar -->
-                <aside class="col-lg-4 d-flex flex-column gap-3" aria-label="Garantías y compromisos">
-                    <article class="card service-card border-0 shadow-sm p-4 bg-white">
-                        <header class="d-flex align-items-center mb-3">
-                            <span class="icon-wrapper me-3"><i class="fa-solid fa-tags fs-4"></i></span>
-                            <h3 class="h5 fw-bold mb-0">Mejor Precio Garantizado</h3>
-                        </header>
-                        <p class="text-muted mb-0 small">Si ya posees una propuesta formal, compártela con nosotros y
-                            ajustamos el importe manteniendo acabados de alta calidad.</p>
-                    </article>
-
-                    <article class="card service-card border-0 shadow-sm p-4 bg-white">
-                        <header class="d-flex align-items-center mb-3">
-                            <span class="icon-wrapper me-3"><i class="fa-solid fa-clock fs-4"></i></span>
-                            <h3 class="h5 fw-bold mb-0">Respuesta en 24/48h</h3>
-                        </header>
-                        <p class="text-muted mb-0 small">Revisamos tu solicitud rápidamente para ofrecerte una
-                            valoración o agendar una visita técnica sin coste.</p>
-                    </article>
-
-                    <article class="card service-card border-0 shadow-sm p-4 bg-white">
-                        <header class="d-flex align-items-center mb-3">
-                            <span class="icon-wrapper me-3"><i class="fa-solid fa-thumbs-up fs-4"></i></span>
-                            <h3 class="h5 fw-bold mb-0">Sin Compromiso</h3>
-                        </header>
-                        <p class="text-muted mb-0 small">Nuestras evaluaciones y presupuestos no conllevan ningún tipo
-                            de compromiso de contratación.</p>
-                    </article>
-                </aside>
-
-            </div>
-
-            <!-- Pasos -->
-            <section class="mt-5" aria-labelledby="titulo-proceso">
-                <header class="text-center text-white mb-4">
-                    <h2 id="titulo-proceso" class="fw-bold">¿Cómo Funciona?</h2>
+                <!-- Encabezado del Hero -->
+                <header class="text-center text-white mb-5">
+                    <h1 class="display-4 fw-bold">Solicita tu Presupuesto Sin Compromiso</h1>
+                    <p class="fs-5 max-w-700 mx-auto text-light">Si tienes un presupuesto... <span
+                            class="fw-bold text-warning">¡TE LO MEJORAMOS!</span> Déjanos los detalles de tu proyecto y
+                        nos
+                        pondremos en contacto contigo. </p>
+                    <div class="divider mx-auto my-3"></div>
                 </header>
 
-                <ol class="row g-4 list-unstyled m-0 p-0">
-                    <li class="col-md-4">
-                        <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
-                            <span class="icon-wrapper mx-auto mb-3"><i
-                                    class="fa-solid fa-pen-to-square fs-3"></i></span>
-                            <h3 class="h5 fw-bold">1. Envía tu Solicitud</h3>
-                            <p class="text-muted small mb-0">Rellena el formulario con las especificaciones y archivos
-                                de tu reforma.</p>
-                        </article>
-                    </li>
+                <div class="row g-4">
 
-                    <li class="col-md-4">
-                        <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
-                            <span class="icon-wrapper mx-auto mb-3"><i
-                                    class="fa-solid fa-clipboard-check fs-3"></i></span>
-                            <h3 class="h5 fw-bold">2. Estudiamos el Proyecto</h3>
-                            <p class="text-muted small mb-0">Evaluamos los requerimientos y agendamos una visita previa
-                                si es necesario.</p>
-                        </article>
-                    </li>
+                    <!-- Sección 1: Formulario Principal -->
+                    <section class="col-lg-8" aria-labelledby="titulo-formulario">
+                        <form id="presupuesto-form" class="card border-0 shadow-lg p-4 rounded-4 bg-white">
 
-                    <li class="col-md-4">
-                        <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
-                            <span class="icon-wrapper mx-auto mb-3"><i
-                                    class="fa-solid fa-file-invoice-dollar fs-3"></i></span>
-                            <h3 class="h5 fw-bold">3. Recibe la Propuesta</h3>
-                            <p class="text-muted small mb-0">Te entregamos una valoración desglosada con el mejor precio
-                                garantizado.</p>
+                            <fieldset class="row g-3 mb-4 border-0 p-0">
+                                <legend id="titulo-formulario" class="h3 fw-bold text-dark mb-3 float-none w-auto">
+                                    <i class="fa-solid fa-calculator me-2 highlight-text"></i> Detalles del Proyecto
+                                </legend>
+
+                                <p class="col-md-6 m-0">
+                                    <label for="tipo-proyecto" class="form-label fw-semibold">Tipo de Proyecto</label>
+                                    <select id="tipo-proyecto" class="form-select form-select-lg fs-6" required>
+                                        <option value="" selected disabled> Selecciona una opción...</option>
+                                        <option value="integral">Reforma Integral</option>
+                                        <option value="cocina-bano">Cocinas y Baños</option>
+                                        <option value="pintura">Pintura y Acabados</option>
+                                        <option value="albanileria">Albañileria General</option>
+                                        <option value="otro">Otro tipo de trabajo</option>
+                                    </select>
+                                </p>
+
+                                <p class="col-md-6 m-0">
+                                    <label for="ubicacion" class="form-label fw-semibold">Ubicación/Población</label>
+                                    <input type="text" id="ubicacion" class="form-control form-control-lg fs-6"
+                                        placeholder="Ej. Valencia, Torrent, Paterna..." required>
+                                </p>
+
+                                <p class="col-12 m-0 mt-3">
+                                    <label for="descripcion" class="form-label fw-semibold">Descripción de las obras o
+                                        reformas</label>
+                                    <textarea id="descripcion" class="form-control fs-6" rows="4"
+                                        placeholder="Explícanos brevemente qué deseas hacer,m² aproximados, calidades, etc."
+                                        required></textarea>
+                                </p>
+
+                                <p class="col-12 m-0 mt-3">
+                                    <label for="archivos" class="form-label fw-semibold">Subir Planos, Fotos o
+                                        Presupuesto
+                                        actual (Opcional)</label>
+                                    <input class="form-control" type="file" id="archivos" multiple>
+                                    <small class="form-text text-muted">Puedes adjuntar fotos del estado actual o un
+                                        presupuesto previo para que lo mejoremos.</small>
+                                </p>
+
+                            </fieldset>
+
+                            <hr class="my-3">
+
+                            <fieldset class="row g-3 border-0 p-0">
+                                <legend class="h4 fw-bold text-dark mb-3 float-none w-auto">
+                                    <i class="fa-solid fa-user me-2 highlight-text"></i>Datos de Contacto
+                                </legend>
+
+                                <p class="col-md-6 m-0">
+                                    <label for="nombre" class="form-label fw-semibold">Nombre Completo</label>
+                                    <input type="text" id="nombre" class="form-control form-control-lg fs-6"
+                                        placeholder="Tu nombre" required>
+                                </p>
+
+                                <p class="col-md-6 m-0">
+                                    <label for="telefono" class="form-label fw-semibold">Teléfono de Contacto</label>
+                                    <input type="tel" id="telefono" class="form-control form-control-lg fs-6"
+                                        placeholder="Ej. 600 000 000" required>
+                                </p>
+
+                                <p class="col-12 m-0 mt-3">
+                                    <label for="email" class="form-label fw-semibold">Correo Electrónico</label>
+                                    <input type="email" id="email" class="form-control form-control-lg fs-6"
+                                        placeholder="tu@email.com" required>
+                                </p>
+                            </fieldset>
+
+                            <p class="text-center mt-4 mb-0">
+                                <button type="submit" class="btn btn-primary-custom btn-lg w-100 shadow">
+                                    Enviarme Presupuesto Gratuito <i class="fa-solid fa-paper-plane ms-2"></i>
+                                </button>
+                            </p>
+
+                        </form>
+                    </section>
+
+                    <!-- Sidebar -->
+                    <aside class="col-lg-4 d-flex flex-column gap-3" aria-label="Garantías y compromisos">
+                        <article class="card service-card border-0 shadow-sm p-4 bg-white">
+                            <header class="d-flex align-items-center mb-3">
+                                <span class="icon-wrapper me-3"><i class="fa-solid fa-tags fs-4"></i></span>
+                                <h3 class="h5 fw-bold mb-0">Mejor Precio Garantizado</h3>
+                            </header>
+                            <p class="text-muted mb-0 small">Si ya posees una propuesta formal, compártela con nosotros
+                                y
+                                ajustamos el importe manteniendo acabados de alta calidad.</p>
                         </article>
-                    </li>
-                </ol>
-            </section>
+
+                        <article class="card service-card border-0 shadow-sm p-4 bg-white">
+                            <header class="d-flex align-items-center mb-3">
+                                <span class="icon-wrapper me-3"><i class="fa-solid fa-clock fs-4"></i></span>
+                                <h3 class="h5 fw-bold mb-0">Respuesta en 24/48h</h3>
+                            </header>
+                            <p class="text-muted mb-0 small">Revisamos tu solicitud rápidamente para ofrecerte una
+                                valoración o agendar una visita técnica sin coste.</p>
+                        </article>
+
+                        <article class="card service-card border-0 shadow-sm p-4 bg-white">
+                            <header class="d-flex align-items-center mb-3">
+                                <span class="icon-wrapper me-3"><i class="fa-solid fa-thumbs-up fs-4"></i></span>
+                                <h3 class="h5 fw-bold mb-0">Sin Compromiso</h3>
+                            </header>
+                            <p class="text-muted mb-0 small">Nuestras evaluaciones y presupuestos no conllevan ningún
+                                tipo
+                                de compromiso de contratación.</p>
+                        </article>
+                    </aside>
+
+                </div>
+
+        </section>
+
+        <!-- Pasos -->
+        <section class="mt-5" aria-labelledby="titulo-proceso">
+            <header class="text-center text-white mb-4">
+                <h2 id="titulo-proceso" class="fw-bold">¿Cómo Funciona?</h2>
+            </header>
+
+            <ol class="row g-4 list-unstyled m-0 p-0">
+                <li class="col-md-4">
+                    <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
+                        <span class="icon-wrapper mx-auto mb-3"><i class="fa-solid fa-pen-to-square fs-3"></i></span>
+                        <h3 class="h5 fw-bold">1. Envía tu Solicitud</h3>
+                        <p class="text-muted small mb-0">Rellena el formulario con las especificaciones y archivos
+                            de tu reforma.</p>
+                    </article>
+                </li>
+
+                <li class="col-md-4">
+                    <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
+                        <span class="icon-wrapper mx-auto mb-3"><i class="fa-solid fa-clipboard-check fs-3"></i></span>
+                        <h3 class="h5 fw-bold">2. Estudiamos el Proyecto</h3>
+                        <p class="text-muted small mb-0">Evaluamos los requerimientos y agendamos una visita previa
+                            si es necesario.</p>
+                    </article>
+                </li>
+
+                <li class="col-md-4">
+                    <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
+                        <span class="icon-wrapper mx-auto mb-3"><i
+                                class="fa-solid fa-file-invoice-dollar fs-3"></i></span>
+                        <h3 class="h5 fw-bold">3. Recibe la Propuesta</h3>
+                        <p class="text-muted small mb-0">Te entregamos una valoración desglosada con el mejor precio
+                            garantizado.</p>
+                    </article>
+                </li>
+            </ol>
+        </section>
 
         </div>
     </main>
@@ -239,3 +242,5 @@
 
 
 </body>
+
+</html>
