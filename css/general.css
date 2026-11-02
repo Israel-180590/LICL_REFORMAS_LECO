@@ -62,7 +62,7 @@ body {
     position: relative;
     min-height: 100vh;
     /* Reemplaza la URL por la ruta de tu archivo de imagen */
-    background-image: url('../images/reformas.jpeg');
+    background-image: url('../images/Reformas.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
