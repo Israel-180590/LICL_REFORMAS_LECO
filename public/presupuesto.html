@@ -91,10 +91,11 @@
 
                     <!-- Sección 1: Formulario Principal -->
                     <section class="col-lg-8" aria-labelledby="titulo-formulario">
-                        <form id="presupuesto-form" class="card border-0 shadow-lg p-4 rounded-4 bg-white">
+                        <form id="presupuesto-form"
+                            class="presupuesto-form card border-0 shadow-lg p-4 rounded-4 bg-white">
 
                             <fieldset class="row g-3 mb-4 border-0 p-0">
-                                <legend id="titulo-formulario" class="h3 fw-bold text-dark mb-3 float-none w-auto">
+                                <legend id="titulo-formulario" class="titulo-form h3 fw-bold mb-3 float-none w-auto">
                                     <i class="fa-solid fa-calculator me-2 highlight-text"></i> Detalles del Proyecto
                                 </legend>
 
@@ -133,12 +134,14 @@
                                         presupuesto previo para que lo mejoremos.</small>
                                 </p>
 
+                                <hr class="my-3">
+
                             </fieldset>
 
-                            <hr class="my-3">
+
 
                             <fieldset class="row g-3 border-0 p-0">
-                                <legend class="h4 fw-bold text-dark mb-3 float-none w-auto">
+                                <legend class="titulo-form h4 fw-bold  mb-3 float-none w-auto">
                                     <i class="fa-solid fa-user me-2 highlight-text"></i>Datos de Contacto
                                 </legend>
 
@@ -161,7 +164,28 @@
                                 </p>
                             </fieldset>
 
-                            <p class="text-center mt-4 mb-0">
+
+                            <!-- CHECKBOX DE PRIVACIDAD DE DATOS -->
+                            <div class="form-check d-flex align-items-start gap-2 my-3 text-start">
+                                <input class="form-check-input flex-shrink-0 mt-1" type="checkbox"
+                                    id="checkPrivacidadPresupuesto">
+                                <label class="form-check-label text-dark small" for="checkPrivacidadPresupuesto">
+                                    He leído y acepto la <a href="../public/politica-privacidad.html"
+                                        class="text-primary fw-bold text-decoration-underline" target="_blank">política
+                                        de privacidad</a> y autorizo el tratamiento de mis datos personales para esta
+                                    solicitud.
+                                </label>
+                            </div>
+
+                            <!-- AVISO DE ERROR (OCULTO POR DEFECTO) -->
+                            <div id="mensajeAlertaPresupuesto"
+                                class="alert alert-danger d-none py-2 px-3 mb-3 small shadow-sm text-start"
+                                role="alert">
+                                <i class="fa-solid fa-triangle-exclamation me-2"></i> Debes aceptar la política de
+                                privacidad para enviar el presupuesto.
+                            </div>
+
+                            <p class="text-center mt-2 mb-0">
                                 <button type="submit" class="btn btn-primary-custom btn-lg w-100 shadow">
                                     Enviarme Presupuesto Gratuito <i class="fa-solid fa-paper-plane ms-2"></i>
                                 </button>
@@ -216,7 +240,7 @@
                 <li class="col-md-4">
                     <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
                         <span class="icon-wrapper mx-auto mb-3"><i class="fa-solid fa-pen-to-square fs-3"></i></span>
-                        <h3 class="h5 fw-bold">1. Envía tu Solicitud</h3>
+                        <h3 class="h5 fw-bold mt-2">1. Envía tu Solicitud</h3>
                         <p class="text-muted small mb-0">Rellena el formulario con las especificaciones y archivos
                             de tu reforma.</p>
                     </article>
@@ -225,7 +249,7 @@
                 <li class="col-md-4">
                     <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
                         <span class="icon-wrapper mx-auto mb-3"><i class="fa-solid fa-clipboard-check fs-3"></i></span>
-                        <h3 class="h5 fw-bold">2. Estudiamos el Proyecto</h3>
+                        <h3 class="h5 fw-bold mt-2">2. Estudiamos el Proyecto</h3>
                         <p class="text-muted small mb-0">Evaluamos los requerimientos y agendamos una visita previa
                             si es necesario.</p>
                     </article>
@@ -235,7 +259,7 @@
                     <article class="card service-card border-0 shadow-sm p-4 text-center h-100 bg-white">
                         <span class="icon-wrapper mx-auto mb-3"><i
                                 class="fa-solid fa-file-invoice-dollar fs-3"></i></span>
-                        <h3 class="h5 fw-bold">3. Recibe la Propuesta</h3>
+                        <h3 class="h5 fw-bold mt-2">3. Recibe la Propuesta</h3>
                         <p class="text-muted small mb-0">Te entregamos una valoración desglosada con el mejor precio
                             garantizado.</p>
                     </article>
@@ -250,6 +274,45 @@
         <p>&copy; 2026 LECO Reformas y Construcciones · Todos los derechos reservados · LICL DEVWORKS</p>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const formPresupuesto = document.getElementById("presupuesto-form");
+            const checkboxPrivacidad = document.getElementById("checkPrivacidadPresupuesto");
+            const mensajeAlerta = document.getElementById("mensajeAlertaPresupuesto");
+
+            if (formPresupuesto && checkboxPrivacidad) {
+
+                // Interceptamos el envío del formulario
+                formPresupuesto.addEventListener("submit", function (e) {
+                    if (!checkboxPrivacidad.checked) {
+                        // Detiene el envío del formulario
+                        e.preventDefault();
+
+                        // Muestra la alerta de error
+                        if (mensajeAlerta) {
+                            mensajeAlerta.classList.remove("d-none");
+                        }
+
+                        // Aplica el efecto visual de agitación (shake) al bloque de la casilla
+                        const contenedorCheck = checkboxPrivacidad.closest(".form-check");
+                        if (contenedorCheck) {
+                            contenedorCheck.classList.add("shake");
+                            setTimeout(() => {
+                                contenedorCheck.classList.remove("shake");
+                            }, 500);
+                        }
+                    }
+                });
+
+                // Oculta la alerta automáticamente en cuanto el usuario marque la casilla
+                checkboxPrivacidad.addEventListener("change", function () {
+                    if (this.checked && mensajeAlerta) {
+                        mensajeAlerta.classList.add("d-none");
+                    }
+                });
+            }
+        });
+    </script>
 
     <script>
         document.getElementById('presupuesto-form').addEventListener('submit', function (e) {
@@ -258,6 +321,7 @@
             this.reset();
         });
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
