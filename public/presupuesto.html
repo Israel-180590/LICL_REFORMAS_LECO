@@ -96,7 +96,9 @@
 
                             <fieldset class="row g-3 mb-4 border-0 p-0">
                                 <legend id="titulo-formulario" class="titulo-form h3 fw-bold mb-3 float-none w-auto">
-                                    <i class="fa-solid fa-calculator me-2 highlight-text"></i> Detalles del Proyecto
+                                    <i class="fa-solid fa-calculator"></i>
+                                    Detalles del
+                                    Proyecto
                                 </legend>
 
                                 <p class="col-md-6 m-0">
@@ -141,8 +143,9 @@
 
 
                             <fieldset class="row g-3 border-0 p-0">
-                                <legend class="titulo-form h4 fw-bold  mb-3 float-none w-auto">
-                                    <i class="fa-solid fa-user me-2 highlight-text"></i>Datos de Contacto
+                                <legend class=" titulo-form h4 fw-bold  mb-3 float-none w-auto">
+                                    <i class="fa-solid fa-user me-2 highlight-text"></i>Datos de
+                                    Contacto
                                 </legend>
 
                                 <p class="col-md-6 m-0">
@@ -170,7 +173,7 @@
                                 <input class="form-check-input flex-shrink-0 mt-1" type="checkbox"
                                     id="checkPrivacidadPresupuesto">
                                 <label class="form-check-label text-dark small" for="checkPrivacidadPresupuesto">
-                                    He leído y acepto la <a href="../public/politica-privacidad.html"
+                                    He leído y acepto la <a href="../privaci/privacidad.html"
                                         class="text-primary fw-bold text-decoration-underline" target="_blank">política
                                         de privacidad</a> y autorizo el tratamiento de mis datos personales para esta
                                     solicitud.
@@ -199,7 +202,7 @@
                         <article class="card service-card border-0 shadow-sm p-4 bg-white">
                             <header class="d-flex align-items-center mb-3">
                                 <span class="icon-wrapper me-3"><i class="fa-solid fa-tags fs-4"></i></span>
-                                <h3 class="h5 fw-bold mb-0">Mejor Precio Garantizado</h3>
+                                <h3 class="h5 fw-bold mb-0 text-white">Mejor Precio Garantizado</h3>
                             </header>
                             <p class="text-muted mb-0 small">Si ya posees una propuesta formal, compártela con nosotros
                                 y
@@ -209,7 +212,7 @@
                         <article class="card service-card border-0 shadow-sm p-4 bg-white">
                             <header class="d-flex align-items-center mb-3">
                                 <span class="icon-wrapper me-3"><i class="fa-solid fa-clock fs-4"></i></span>
-                                <h3 class="h5 fw-bold mb-0">Respuesta en 24/48h</h3>
+                                <h3 class="h5 fw-bold mb-0 text-white">Respuesta en 24/48h</h3>
                             </header>
                             <p class="text-muted mb-0 small">Revisamos tu solicitud rápidamente para ofrecerte una
                                 valoración o agendar una visita técnica sin coste.</p>
@@ -218,7 +221,7 @@
                         <article class="card service-card border-0 shadow-sm p-4 bg-white">
                             <header class="d-flex align-items-center mb-3">
                                 <span class="icon-wrapper me-3"><i class="fa-solid fa-thumbs-up fs-4"></i></span>
-                                <h3 class="h5 fw-bold mb-0">Sin Compromiso</h3>
+                                <h3 class="h5 fw-bold mb-0 text-white">Sin Compromiso</h3>
                             </header>
                             <p class="text-muted mb-0 small">Nuestras evaluaciones y presupuestos no conllevan ningún
                                 tipo
@@ -232,7 +235,8 @@
 
         <!-- Pasos -->
         <section class="mt-5" aria-labelledby="titulo-proceso">
-            <header class="text-center text-white mb-4">
+            <header class="d-flex justify-content-center align-items-center text-white mb-4"
+                style="text-align: center;">
                 <h2 id="titulo-proceso" class="fw-bold">¿Cómo Funciona?</h2>
             </header>
 
@@ -270,8 +274,19 @@
         </div>
     </main>
 
-    <footer class="footer-leco">
-        <p>&copy; 2026 LECO Reformas y Construcciones · Todos los derechos reservados · LICL DEVWORKS</p>
+    <!-- FOOTER LECO -->
+    <footer class="footer-leco mt-auto py-3">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; 2026 Reformas Leco Valencia. Todos los derechos reservados.</p>
+            <ul class="list-unstyled d-flex mb-0">
+                <li>
+                    <a href="../privaci/privacidad.html"
+                        class="text-white text-decoration-none small link-light opacity-75 hover-opacity-100">
+                        <i class="fa-solid fa-shield-halved me-1"></i> Política de Privacidad
+                    </a>
+                </li>
+            </ul>
+        </div>
     </footer>
 
     <script>
