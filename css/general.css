@@ -182,7 +182,7 @@ body {
         width: 100%;
     }
 
-    .navbar-nav {
+    .nav {
         flex-direction: column !important;
         text-align: center;
         width: 100%;
