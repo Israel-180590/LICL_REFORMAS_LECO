@@ -182,12 +182,12 @@ body {
 
 
 @media (max-width: 767.98px) {
-    /* 1. Reducir ligeramente la escala general del texto */
+   
     body {
         font-size: 0.92rem;
     }
 
-    /* 2. Achicar títulos y encabezados para evitar desbordamientos */
+    
     h1, .hero-section h1 {
         font-size: 1.75rem !important;
         line-height: 1.25;
@@ -197,19 +197,19 @@ body {
         font-size: 1.35rem !important;
     }
 
-    /* 3. Ajustar el tamaño del logo para ganar espacio en la cabecera junto al botón */
+    
     .nav-logo {
         width: 130px !important;
     }
 
-    /* 4. Optimizar espaciados en la sección de inicio */
+   
     .hero-section {
         padding-top: 70px;
         padding-bottom: 60px;
         min-height: auto; 
     }
 
-    /* 5. Comportamiento en columna del header */
+   
     header {
         flex-direction: column;
         align-items: stretch;
@@ -222,14 +222,13 @@ body {
         width: 100%;
     }
 
-    /* 6. Apilar de forma vertical y limpia los elementos del menú */
+   
     .nav {
         flex-direction: column !important;
         text-align: center;
         width: 100%;
     }
 
-    /* 7. Tamaño proporcional para los enlaces del menú desplegable */
     .nav-link {
         font-size: 1.1rem !important;
         padding: 0.4rem 0;
