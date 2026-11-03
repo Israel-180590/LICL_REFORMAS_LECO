@@ -124,7 +124,12 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-card:hover {
+.service-card-service {
+    border-radius:16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card-service:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
 }
@@ -138,6 +143,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-outline-dark {
+    font-size: 1.1rem;
+    padding: 10px 26px;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 .footer-leco {
